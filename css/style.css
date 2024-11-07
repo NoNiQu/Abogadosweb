@@ -765,54 +765,39 @@ form button{
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
     .top-bar-content{
         display: flex;
         justify-content: space-between;
-        font-size: 10px;
     }
     .menu-button {
         display: inline-block;
     }
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: var(--primary-secciones-1);
-        color: var(--basics-white);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 10px;
+        font-size: 40px;
     }
-    .nav-links li {
-        margin: 10px 0;
-    }
-    .nav-links.active {
-        display: flex;
-    }
+
     .hero-content{
-        height: 80%;
+        height: 100%;
     }
     .hero-content > p:nth-child(1){
-        width: 150px;
+        width: 100px;
         font-size: var(--size-texto-destacado);
         margin-bottom: 1.5rem;
-        font-size: 40px;
+        font-size: 20px;
     }
     .hero-content > h1:nth-child(2){
         font-family: RecklessNeue;
-        width: 200px;
+        width: 150px;
         margin-bottom: 1.5rem;
-        font-size: 40px;
+        font-size: 30px;
     }
     .hero-content > p:nth-child(3){
         width: 150px;
         font-size: var(--size-texto-destacado);
         margin-bottom: 1.5rem;
-        font-size: 30px;
+        font-size: 20px;
     }
     .hero-buttons{
         margin-top: 1.5rem;
@@ -821,32 +806,21 @@ form button{
         width: 300px;
     }
     .btn-primary{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
-    .wrapper {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .one {
-        grid-column: 2 / 6;
-        grid-row: 1;
-    }
-    .two {
-        grid-column: 2 / 6;
-        grid-row: 2;
-    }
     .two img{
         text-align: center;
-        width: 300px;
+        width: 200px;
     }
 
     .services > h3:nth-child(1){
-        width: 69%;
-        font-size: 30px;
+        width: 80%;
+        font-size: 20px;
     }
     .services > p:nth-child(2){
-        width: 69%;
-        font-size: 20px;
+        width: 80%;
+        font-size: 30px;
     }
 
     
