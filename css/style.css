@@ -567,7 +567,7 @@ form button{
         display: flex;
     }
     .hero-content{
-        height: 80%;
+        height: 100%;
     }
     .hero-content > p:nth-child(1){
         width: 200px;
@@ -607,7 +607,7 @@ form button{
     }
     .two img{
         text-align: center;
-        width: 300px;
+        width: 200px;
     }
 
     .services > h3:nth-child(1){
