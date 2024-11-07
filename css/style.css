@@ -1,0 +1,766 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "RecklessNeue";
+    src: url(../assets/font/RecklessNeue-Regular.woff2)
+    format("woff2");
+}
+@font-face {
+    font-family: "RecklessNeue";
+    src: url(../assets/font/RecklessNeue-Medium.woff2)
+    format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "NeueMontreal";
+    src: url(../assets/font/NeueMontreal-Regular.woff2)
+    format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "NeueMontreal";
+    src: url(../assets/font/NeueMontreal-Medium.woff2)
+    format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "NeueMontreal";
+    src: url(../assets/font/NeueMontreal-MediumItalic.woff2)
+    format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+:root {
+
+    --width-container: 90%;
+    --margin-center: 0 auto;
+
+    /* Colors */
+    --auxiliary-acentos-1: #c55a26;
+    --auxiliary-acentos-2: #e3be86;
+    --auxiliary-hover: #faa82a;
+    --basics-black: #000000;
+    --basics-white: #f1f0ea;
+    --primary-fondo: var(--basics-white);
+    --primary-secciones-1: #112c50;
+    --primary-secciones-2: #3f92ff;
+    --secondary-secciones-2: #b9cade;
+    --secondary-secciones-3: #d7c2b6;
+    --text-on-dark: var(--basics-white);
+    --text-primary: var(--basics-black);
+    
+    /* Typography */
+    --size-button-text: 0.875rem;
+    --size-parrafo: 1rem;
+    --size-h4: 1.125rem;
+    --size-texto-destacado: 1.25rem;
+    --size-h3: 2rem;
+    --size-h2: 2.25rem;
+    --size-h1: 3.4375rem;
+    /* string */
+    --weight-parrafo: Regular;
+    
+    /* Borders-Sizes */
+--radius-button-radius: 0.625rem;
+}
+
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: var(--size-h1);
+}
+h2{
+    font-size: var(--size-h2);
+}
+h3{
+    font-size: var(--size-h3);
+}
+h4{
+    font-size: var(--size-h4);
+}
+
+/*HEADER*/
+
+header{
+    font-family: NeueMontreal;
+    color: var(--basics-white);
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    padding: 0.1px;
+    background-image: url(../assets/img/header-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.top-bar{
+    background-color: var(--primary-secciones-1); 
+    padding: 10px 0;
+}
+header a{
+    color: var(--basics-white);
+}
+.top-bar-content{
+    width: var(--width-container);
+    margin: var(--margin-center);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1px;
+    text-align: center;
+}
+.top-bar-content > a:nth-child(1){
+    grid-column: 1;
+}
+.top-bar-content > span:nth-child(2){
+    grid-column: 11;
+}
+.top-bar-content >  a:nth-child(3){
+    grid-column: 12;
+}
+header nav{
+    padding: 20px 0;
+    width: var(--width-container);
+    margin: var(--margin-center);
+    display: flex;
+    justify-content: space-between;
+}
+.menu-button {
+    background-color: var(--primary-secciones-1);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    display: none; /* Oculta el botón por defecto */
+}
+header nav ul {
+    list-style: none;
+}
+header nav ul li {
+    margin-right: 15px;
+}
+.nav-links{
+    font-weight: 500;
+    display: flex;
+}
+.hero-content{
+    width: var(--width-container);
+    margin: var(--margin-center);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65%;
+}
+.hero-content > p:nth-child(1){
+    width: 400px;
+    font-size: var(--size-texto-destacado);
+    margin-bottom: 1.5rem;
+}
+.highlight{
+    font-weight: 500;
+    font-style: italic;
+}
+.hero-content > h1:nth-child(2){
+    font-family: RecklessNeue;
+    width: 600px;
+    margin-bottom: 1.5rem;
+}
+.hero-content > p:nth-child(3){
+    width: 550px;
+    font-size: var(--size-texto-destacado);
+    margin-bottom: 1.5rem;
+}
+.hero-buttons{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    font-size: var(--size-texto-destacado);
+}
+.btn-primary{
+    background-color: var(--auxiliary-acentos-2);
+    color: var(--basics-black);
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: NeueMontreal;
+    font-weight: 500;
+}
+.btn-secondary{
+    background-color: var(--auxiliary-acentos-1);
+    color: var(--basics-white);
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: NeueMontreal;
+    font-weight: 500;
+}
+
+/*SECTION 1*/
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: 2 / 6;
+    grid-row: 1;
+}
+.one h2{
+    padding: 20px 0;
+    font-family: RecklessNeue;
+    font-size: 1.8rem;
+}
+.one p{
+    font-family: NeueMontreal;
+}
+.one > p:nth-child(3){
+    padding: 20px 0;
+}
+.one > p:nth-child(4) {
+    padding: 10px 0;
+}
+.one > div:nth-child(5){
+    padding: 40px 0;
+}
+.two {
+    grid-column: 7 / 12;
+}
+.two img {
+    border-radius: 5%;
+}
+.banner-text {
+    position: relative;
+    color: var(--basics-black);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.banner-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 10px;
+    background-color: var(--primary-secciones-2);
+}
+
+/*SECTION 2*/
+
+.services{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    padding: 0.1px;
+    background-image: url(../assets/img/techo-cristal.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--basics-white);
+}
+.services > h3:nth-child(1){
+    width: 30%;
+    font-family: RecklessNeue;
+    font-size: 2.5rem;
+}
+.services > p:nth-child(2){
+    width: 30%;
+    font-family: NeueMontreal;
+    font-size: var(--size-texto-destacado);
+    padding: 30px 0;
+}
+
+/*SECTION 3*/
+
+.team {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 45rem;
+    padding: 5rem 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto); 
+}
+.uno {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+.team h3{
+    font-family: RecklessNeue;
+    font-size: 2rem;
+    padding: 50px 0;
+    margin-right: 20px;
+}
+.team-members {
+    grid-column: 4 / 13;
+    background-color: var(--secondary-secciones-2);
+    padding: 3rem 0;
+    border-radius: 4%;
+    padding: 1.5rem;
+    font-family: NeueMontreal;
+}
+.cachondo{
+    font-size: var(--size-texto-destacado);
+    padding: 30px 0;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card h4{
+    font-family: RecklessNeue;
+    padding: 10px 0;
+}
+.card p{
+    font-family: NeueMontreal;
+    font-size: 13px;
+}
+
+/*SECTION 4*/
+
+.testimonials{
+    background-color: var(--primary-secciones-1);
+    color: var(--basics-white);
+    height: 600px;
+}
+.maricon{
+    padding: 3rem 0;
+    width: 30%;
+}
+.testimonials h3{
+    font-family: RecklessNeue;
+    padding-top: 30px;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+.testimonials-container{
+    display: flex;
+    justify-content: space-between;
+}
+blockquote{
+    background-color: var(--basics-white);
+    color: var(--basics-black);
+    padding: 60px;
+    width: 28%;
+    font-family: NeueMontreal;
+}
+blockquote footer{
+    padding: 20px 0;
+}
+
+/*SECTION 5*/
+
+.mariconazo{
+    padding: 3rem 0;
+}
+.contact-form h3{
+    font-family: RecklessNeue;
+    padding-top: 30px;
+}
+.contact-form p{
+    font-family: NeueMontreal;
+    padding-top: 10px;
+}
+.contact-form form{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+.contact-form form input, textarea{
+    background-color: lightgrey;
+    padding: 20px;
+    border: none;
+}
+#name{
+    grid-column: 2/7;
+    grid-row: 1;
+}
+#surname{
+    grid-column: 7/12;
+    grid-row: 1;
+}
+#email{
+    grid-column: 2/7;
+    grid-row: 2;
+}
+#subject{
+    grid-column: 7/12;
+    grid-row: 2;
+}
+#message{
+    grid-column: 2/12;
+    grid-row: 3;
+}
+form button{
+    grid-column: 11/12;
+    grid-row: 4;
+}
+.btn-tercero{
+    background-color: var(--basics-white);
+    color: var(--basics-black);
+    border: 1px solid var(--basics-black);
+    padding: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: NeueMontreal;
+    font-weight: 500;
+}
+
+/*SECTION 6*/
+
+.location{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 70%;
+    margin: 0 auto;
+    height: 600px;
+    padding: 50px 0;
+}
+.nomapa{
+    grid-column: 1/4;
+}
+.map{
+    grid-column: 5/13;
+}
+.location h3{
+    font-family: RecklessNeue;
+}
+.location p{
+    font-family: NeueMontreal;
+    padding-top: 10px;
+    font-size: var(--size-texto-destacado);
+    width: 50%;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: var(--primary-secciones-1);
+    color: var(--basics-white);
+    font-family: NeueMontreal;
+    padding: 30px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.footer a{
+    color: var(--basics-white);
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+}
+.footer-info a{
+    padding: 15px 0;
+}
+
+.footer-nav h4{
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.footer-nav ul{
+    list-style: none;
+}
+.footer-nav li{
+    padding: 15px 0;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.social-media{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsletter{
+    width: 30%;
+}
+.newsletter h4{
+    font-size: 12px;
+    font-weight: lighter;
+}
+.newsletter form{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.newsletter form{
+    padding: 20px 0;
+}
+.newsletter form input{
+    width: 100%;
+    padding: 8px;
+}
+
+.btn-cuarta{
+    background-color: var(--primary-secciones-1);
+    color: var(--basics-white);
+    border: 1px solid var(--basics-white);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: NeueMontreal;
+    font-weight: 500;
+}
+
+
+@media (max-width: 1200px) {
+
+    .top-bar-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-button {
+        display: inline-block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--primary-secciones-1);
+        color: var(--basics-white);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hero-content{
+        height: 80%;
+    }
+    .hero-content > p:nth-child(1){
+        width: 200px;
+        font-size: var(--size-texto-destacado);
+        margin-bottom: 1.5rem;
+    }
+    .hero-content > h1:nth-child(2){
+        font-family: RecklessNeue;
+        width: 400px;
+        margin-bottom: 1.5rem;
+    }
+    .hero-content > p:nth-child(3){
+        width: 400px;
+        font-size: var(--size-texto-destacado);
+        margin-bottom: 1.5rem;
+    }
+    .hero-buttons{
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: start;
+        width: 300px;
+    }
+    .btn-primary{
+        margin-bottom: 50px;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .one {
+        grid-column: 2 / 6;
+        grid-row: 1;
+    }
+    .two {
+        grid-column: 2 / 6;
+        grid-row: 2;
+    }
+    .two img{
+        text-align: center;
+        width: 300px;
+    }
+
+    .services > h3:nth-child(1){
+        width: 69%;
+        font-size: 30px;
+    }
+    .services > p:nth-child(2){
+        width: 69%;
+        font-size: 20px;
+    }
+
+    .team {
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 5rem 0;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto); 
+    }
+    .uno {
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+    .team h3{
+        font-family: RecklessNeue;
+        font-size: 2rem;
+        padding: 50px 0;
+        margin-right: 20px;
+    }
+    .team-members {
+        grid-column: 1 / 13;
+        grid-row: 2;
+        background-color: var(--secondary-secciones-2);
+        margin: 40px 0;
+        padding: 3rem 0;
+        border-radius: 0;
+        padding: 1.5rem;
+        font-family: NeueMontreal;
+    }
+    .cachondo{
+        font-size: var(--size-texto-destacado);
+        padding: 30px 0;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card img{
+        margin-top: 30px;
+    }
+
+    .testimonials{
+        height: 100%;
+        padding: 50px 0;
+    }
+    .testimonials h3{
+        font-family: RecklessNeue;
+        padding-top: 30px;
+        width: 300px;
+    }
+    .container{
+        width: 80%;
+    }
+    .testimonials-container{
+        flex-direction: column;
+    }
+    blockquote{
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    #name{
+        grid-column: 2/12;
+        grid-row: 1;
+    }
+    #surname{
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+    #email{
+        grid-column: 2/12;
+        grid-row: 3;
+    }
+    #subject{
+        grid-column: 2/12;
+        grid-row: 4;
+    }
+    #message{
+        grid-column: 2/12;
+        grid-row: 5;
+    }
+    form button{
+        grid-column: 11/12;
+        grid-row: 6;
+    }
+    
+    .location{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: 85%;
+        height: 450px;
+    }
+    .nomapa{
+        grid-column: 1/6;
+        grid-row: 1;
+    }
+    .map{
+        grid-column: 1/6;
+        grid-row: 2;
+    }
+    .location p{
+        width: 100%;
+    }
+
+    .footer{
+        background-color: var(--primary-secciones-1);
+        color: var(--basics-white);
+        font-family: NeueMontreal;
+        padding: 30px 0;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .footer-info, .footer-nav{
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .newsletter{
+        text-align: center;
+        width: 100%;
+    }
+    .newsletter h4{
+        font-size: 20px;
+    }
+    .newsletter form{
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+    }
+    
+}
