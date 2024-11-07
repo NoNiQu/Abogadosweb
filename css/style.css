@@ -769,6 +769,10 @@ form button{
 
 @media (max-width: 500px) {
 
+    .top-bar{
+        font-size: 12px;
+    }
+
     .top-bar-content{
         display: flex;
         justify-content: space-between;
@@ -777,7 +781,7 @@ form button{
         display: inline-block;
     }
     .nav-links {
-        font-size: 7px;
+        font-size: 15px;
     }
 
     .hero-content{
